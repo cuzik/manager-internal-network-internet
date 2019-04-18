@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['POSTGRESQL_USERNAME'] || 'postgres' %>
+  password: <%= ENV['POSTGRESQL_PASSWORD'] || 'postgres' %>
+  host: <%= ENV['POSTGRESQL_HOST'] || 'db' %>
+  port: <%= ENV['POSTGRESQL_PORT'] || 5432 %>
+
+development:
+  <<: *default
+  database: mini_development
+
+test:
+  <<: *default
+  encoding: utf8
+  database: mini_test
+
+production:
+  <<: *default
+  database: mini_production
+  username: manager_internal_network_internet
+  password: <%= ENV['POSTGRESQL_PASSWORD'] %>
