@@ -12,15 +12,6 @@
   </head>
 
   <body>
-    <%= render "layouts/partials/navbar" %>
-    <div id="wrapper">
-      <%= render "layouts/partials/sidebar" %>
-      <div id="content-wrapper">
-        <div class="container-fluid">
-          <%= yield %>
-        </div>
-        <%= render "layouts/partials/footer" %>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>

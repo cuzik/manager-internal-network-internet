@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.8.1'
 
 
 gem 'turbolinks', '~> 5'
