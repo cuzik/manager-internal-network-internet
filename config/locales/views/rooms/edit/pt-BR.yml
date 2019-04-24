@@ -1,0 +1,4 @@
+pt-BR:
+  rooms:
+    edit:
+      title: "Edição da Sala %{room_name}"

@@ -19,3 +19,5 @@
 //= require popper
 //= require bootstrap
 //= require theme/theme
+//= require toastr/toastr
+//= require flashes

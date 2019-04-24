@@ -16,12 +16,15 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
     with.library :rails
   end
 end
+
+I18n.locale = 'pt-BR'
 
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
