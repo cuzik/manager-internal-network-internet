@@ -1,0 +1,6 @@
+pt-BR:
+  rooms:
+    show:
+      title: "Infoemações sobre a Sala %{room_name}"
+      back: "Voltar"
+      edit: "Editar"

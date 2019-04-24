@@ -1,3 +1,10 @@
 @import "theme";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "toastr/toastr";
+
+#toast-container {
+  .toast {
+    opacity: 0.95 !important;
+  }
+}

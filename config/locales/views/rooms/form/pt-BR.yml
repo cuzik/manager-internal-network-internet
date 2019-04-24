@@ -1,0 +1,8 @@
+pt-BR:
+  rooms:
+    form:
+      back: "Voltar"
+      edit:
+        confirm: "Atualizar"
+      new:
+        confirm: "Criar"

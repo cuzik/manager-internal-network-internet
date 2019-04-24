@@ -1,0 +1,12 @@
+pt-BR:
+  controllers:
+    rooms:
+      create:
+        success: "Criado com sucesso"
+        error: "Erro"
+      update:
+        success: "Atualizado com sucesso"
+        error: "Erro"
+      destroy:
+        success: "Destruído com sucesso"
+        error: "Erro"
