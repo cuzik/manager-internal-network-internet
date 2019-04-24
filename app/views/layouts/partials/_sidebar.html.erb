@@ -3,7 +3,7 @@
   <li class="nav-item active">
     <%= link_to('#', class:'nav-link') do %>
       <%= icon('far','address-card') %>
-      <span> MENU </span>
+      <span> MENU <%= current_user.owner? ? "Admin" : "" %> </span>
     <% end %>
   </li>
 

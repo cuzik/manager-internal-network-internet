@@ -11,4 +11,9 @@
 .form-label-group > label {
   padding: var(--input-padding-y) var(--input-padding-x);
   height: auto;
+  width: 100%;
+}
+
+.card-login {
+  width: 400px;
 }
