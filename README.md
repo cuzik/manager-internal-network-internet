@@ -2,15 +2,21 @@
 
 Description Here
 
+## Data Base
+
+[Schema](erd.pdf)
+
 ## Dev
 
 ### Install project depedences
 
-#### Postgress
+- Postgress
 
-#### Ruby `2.6.2`
+- Ruby `2.6.2`
 
-#### Rails `5.2.2`
+- Rails `5.2.2`
+
+- graphviz
 
 ### instlal dependences gems
 

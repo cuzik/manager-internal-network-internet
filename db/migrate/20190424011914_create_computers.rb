@@ -11,5 +11,9 @@ class CreateComputers < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :computers, :name, unique: true
+    add_index :computers, :mac_address, unique: true
+    add_index :computers, :ip, unique: true
   end
 end

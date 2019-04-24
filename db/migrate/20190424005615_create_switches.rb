@@ -6,5 +6,8 @@ class CreateSwitches < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :switches, :name,        unique: true
+    add_index :switches, :mac_address, unique: true
   end
 end

@@ -44,7 +44,7 @@ room_302 = Room.create(name: "302", account: udesc)
 Port.create(number: 1, enabled: true, editabled: false, switch: switch_one)
 (2..24).each do |number|
   port = Port.create(number: number, enabled: true, editabled: false, switch: switch_one)
-  Computer.create(name: "pc_301_01", owner: true, mac_address: "AA:AA:BB:BB:CC:#{number+10}", ip: "192.168.0.#{50 + number}", room: room_301, port_id: port.id)
+  Computer.create(name: "pc_301_#{number}", owner: true, mac_address: "AA:AA:BB:BB:CC:#{number+10}", ip: "192.168.0.#{50 + number}", room: room_301, port_id: port.id)
 end
 
 Port.create(number: 1, enabled: true, editabled: false, switch: switch_two)
@@ -56,7 +56,7 @@ end
 Port.create(number: 1, enabled: true, editabled: false, switch: switch_three)
 (2..24).each do |number|
   port = Port.create(number: number, enabled: true, editabled: false, switch: switch_three)
-  Computer.create(name: "pc_302_1#{number}", owner: true, mac_address: "AA:AA:BB:BB:#{number+50}:C1", ip: "192.168.0.#{150 + number}", room: room_302, port_id: port.id)
+  Computer.create(name: "pc_302_3#{number}", owner: true, mac_address: "AA:AA:BB:BB:#{number+50}:C1", ip: "192.168.0.#{150 + number}", room: room_302, port_id: port.id)
 end
 
 
