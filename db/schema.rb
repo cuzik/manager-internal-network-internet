@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_18_144811) do
+ActiveRecord::Schema.define(version: 2019_04_24_011914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "computers", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "mac_address", default: "", null: false
+    t.string "ip", default: "", null: false
+    t.boolean "owner", default: false, null: false
+    t.bigint "room_id", null: false
+    t.bigint "port_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["port_id"], name: "index_computers_on_port_id"
+    t.index ["room_id"], name: "index_computers_on_room_id"
+  end
+
+  create_table "ports", force: :cascade do |t|
+    t.integer "number", default: 0, null: false
+    t.boolean "enabled", default: true, null: false
+    t.boolean "editabled", default: true, null: false
+    t.bigint "switch_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["switch_id"], name: "index_ports_on_switch_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.bigint "account_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_rooms_on_account_id"
+  end
+
+  create_table "switches", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "mac_address", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +67,13 @@ ActiveRecord::Schema.define(version: 2019_04_18_144811) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name", default: "", null: false
+    t.boolean "owner", default: false, null: false
+    t.bigint "account_id", null: false
+    t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "users", "accounts"
 end
