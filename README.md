@@ -2,6 +2,10 @@
 
 Description Here
 
+## Data Base
+
+[Schema](erd.pdf)
+
 ## Dev
 
 ### Install project depedences
