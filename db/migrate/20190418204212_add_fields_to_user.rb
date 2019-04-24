@@ -1,7 +1,11 @@
 class AddFieldsToUser < ActiveRecord::Migration[5.2]
   def change
-    add_column :users, :name, :string, null: false, default: ""
-    add_column :users, :owner, :boolean, null: false, default: false
-    add_reference :users, :account, foreign_key: true, null: false
+    change_table :users do |t|
+      t.string :name, null: false, default: ""
+      t.string :cpf, null: false, default: ""
+      t.boolean :owner, null: false, default: false
+
+      t.belongs_to :account, index: true, null: false
+    end
   end
 end

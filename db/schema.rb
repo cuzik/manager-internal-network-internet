@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.bigint "port_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["ip"], name: "index_computers_on_ip", unique: true
+    t.index ["mac_address"], name: "index_computers_on_mac_address", unique: true
+    t.index ["name"], name: "index_computers_on_name", unique: true
     t.index ["port_id"], name: "index_computers_on_port_id"
     t.index ["room_id"], name: "index_computers_on_room_id"
   end
@@ -50,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_rooms_on_account_id"
+    t.index ["name"], name: "index_rooms_on_name", unique: true
   end
 
   create_table "switches", force: :cascade do |t|
@@ -57,6 +61,8 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.string "mac_address", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["mac_address"], name: "index_switches_on_mac_address", unique: true
+    t.index ["name"], name: "index_switches_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,6 +74,7 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
+    t.string "cpf", default: "", null: false
     t.boolean "owner", default: false, null: false
     t.bigint "account_id", null: false
     t.index ["account_id"], name: "index_users_on_account_id"
@@ -75,5 +82,4 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "users", "accounts"
 end
