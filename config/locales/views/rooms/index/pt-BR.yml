@@ -3,6 +3,3 @@ pt-BR:
     index:
       title: "Lista de Salas"
       new: "Novo"
-      card:
-        name: "Sala %{room_name}"
-        details: "Ver detalhes"

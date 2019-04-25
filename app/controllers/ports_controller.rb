@@ -5,7 +5,11 @@ class PortsController < ApplicationController
   end
 
   def new
-    @port = Port.new
+    if(params[:switch_id].present?)
+      @port = Switch.find(params[:switch_id]).ports.new
+    else
+      @port = Port.new
+    end
   end
 
   def edit
@@ -21,7 +25,7 @@ class PortsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.ports.create.error')
 
-      redirect_to(new_room_path)
+      redirect_to(new_port_path)
     end
   end
 
@@ -33,7 +37,7 @@ class PortsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.ports.update.error')
 
-      redirect_to(edit_room_path)
+      redirect_to(edit_port_path)
     end
   end
 
@@ -55,6 +59,6 @@ class PortsController < ApplicationController
     end
 
     def port_params
-      params.require(:port).permit(:number, :enabled, :editable)
+      params.require(:port).permit(:number, :enabled, :editable, :switch_id)
     end
 end

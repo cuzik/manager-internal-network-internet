@@ -4,6 +4,8 @@ class CreateSwitches < ActiveRecord::Migration[5.2]
       t.string :name, null: false, default: ""
       t.string :mac_address, null: false, default: ""
 
+      t.belongs_to :account, index: true, null: false
+
       t.timestamps
     end
 

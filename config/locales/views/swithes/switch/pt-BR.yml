@@ -1,0 +1,6 @@
+pt-BR:
+  switches:
+    switch:
+      card:
+        name: "Switch %{switch_name}"
+        details: "Ver detalhes"

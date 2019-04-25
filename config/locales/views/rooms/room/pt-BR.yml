@@ -1,0 +1,6 @@
+pt-BR:
+  rooms:
+    room:
+      card:
+        name: "Sala %{room_name}"
+        details: "Ver detalhes"

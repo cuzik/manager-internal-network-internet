@@ -1,29 +1,12 @@
 <div class="card mb-3">
   <div class="card-header">
     <%= icon('fas','home', class: 'fa-fw h2') %>
-    <span class="h4"> <%= I18n.t('.title') %> </span>
+    <span class="h4"> <%= t('.title') %> </span>
     <%= link_to(t('.new'), new_port_path, class: "btn btn-primary float-right") %>
   </div>
   <div class="card-body">
     <div class="row">
-      <% ports.each do |port| %>
-        <div class="col-xl-3 col-sm-6 mb-3">
-          <div class="card text-white <%= class_color(port) %> o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <%= icon('fas','door-open', class: 'fa-fw') %>
-              </div>
-              <div class="mr-5"><%= t('.card.name', port_number: port.number) %></div>
-            </div>
-            <%=link_to(port, class: 'card-footer text-white clearfix small z-1') do%>
-              <span class="float-left"><%= t('.card.details') %></span>
-              <span class="float-right">
-                <%= icon('fas','angle-right') %>
-              </span>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+      <%= render(partial: 'port', collection: ports) %>
     </div>
   </div>
 </div>

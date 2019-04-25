@@ -1,0 +1,6 @@
+pt-BR:
+  switches:
+    port:
+      card:
+        name: "Porta %{port_number}"
+        details: "Ver detalhes"

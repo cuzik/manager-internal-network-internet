@@ -1,7 +1,7 @@
 pt-BR:
   switches:
     show:
-      title: "Infoemações sobre o Switch %{switch_name}"
+      title: "Informações sobre o Switch %{switch_name}"
       back: "Voltar"
       edit: "Editar"
       delete: "Deletar"

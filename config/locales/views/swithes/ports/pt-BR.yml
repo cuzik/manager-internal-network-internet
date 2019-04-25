@@ -1,0 +1,5 @@
+pt-BR:
+  switches:
+    ports:
+      title: "Lista de Portas"
+      new: "Nova"
