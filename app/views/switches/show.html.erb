@@ -1,0 +1,36 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <%= icon('fas','home', class: 'fa-fw h2') %>
+    <span class="h4">
+      <%= t('.title', switch_name: @switch.name) %>
+    </span>
+    <%= link_to(t('.delete'), @switch, method: :delete, class: "btn btn-danger float-right") %>
+  </div>
+  <div class="card-body">
+    <%= form_with(model: @switch, local: true) do |form| %>
+
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <%= form.label :name %>
+              <%= form.text_field :name, disabled: true, class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-label-group">
+              <%= form.label :mac_address %>
+              <%= form.text_field :mac_address, disabled: true, class: "form-control" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-right">
+        <%= link_to(t('.back'), switches_path, class: "btn btn-primary") %>
+        <%= link_to(t('.edit'), edit_switch_path(@switch), class: "btn btn-primary") %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

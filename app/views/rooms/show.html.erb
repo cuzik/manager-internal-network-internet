@@ -4,6 +4,7 @@
     <span class="h4">
       <%= t('.title', room_name: @room.name) %>
     </span>
+    <%= link_to(t('.delete'), @room, method: :delete, class: "btn btn-danger float-right") %>
   </div>
   <div class="card-body">
     <%= form_with(model: @room, local: true) do |form| %>

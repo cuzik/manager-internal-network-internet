@@ -1,6 +1,6 @@
 pt-BR:
   controllers:
-    rooms:
+    switches:
       create:
         success: "Criado com sucesso"
         error: "Erro ao Criar"

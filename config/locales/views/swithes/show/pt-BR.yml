@@ -1,7 +1,7 @@
 pt-BR:
-  rooms:
+  switches:
     show:
-      title: "Infoemações sobre a Sala %{room_name}"
+      title: "Infoemações sobre o Switch %{switch_name}"
       back: "Voltar"
       edit: "Editar"
       delete: "Deletar"

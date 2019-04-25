@@ -14,15 +14,7 @@
     <% end %>
   </li>
 
-  <li class="nav-item">
-    <%= link_to(destroy_user_session_path, method: :delete, class:'nav-link') do %>
-      <%= icon('fas','sign-out-alt') %>
-      <span>Sair</span>
-    <% end %>
-  </li>
-
   <% if current_user.owner? %>
-
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -31,10 +23,21 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="adminDropdown">
         <%= link_to(rooms_path, class:'dropdown-item') do %>
-        <%= icon('fas','home') %>
-        <span>Salas</span>
-      <% end %>
+          <%= icon('fas','home') %>
+          <span>Salas</span>
+        <% end %>
+        <%= link_to(switches_path, class:'dropdown-item') do %>
+          <%= icon('fab','sith') %>
+          <span>Switch</span>
+        <% end %>
       </div>
     </li>
   <% end %>
+
+  <li class="nav-item">
+    <%= link_to(destroy_user_session_path, method: :delete, class:'nav-link') do %>
+      <%= icon('fas','sign-out-alt') %>
+      <span>Sair</span>
+    <% end %>
+  </li>
 </ul>

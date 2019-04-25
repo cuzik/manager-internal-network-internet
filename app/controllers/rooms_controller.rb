@@ -23,7 +23,9 @@ class RoomsController < ApplicationController
 
       redirect_to(rooms_path)
     else
-      render :new
+      flash[:error] = I18n.t('controllers.rooms.create.error')
+
+      redirect_to(new_room_path)
     end
   end
 
@@ -33,16 +35,22 @@ class RoomsController < ApplicationController
 
       redirect_to(@room)
     else
-      render :edit
+      flash[:error] = I18n.t('controllers.rooms.update.error')
+
+      redirect_to(edit_room_path)
     end
   end
 
   def destroy
-    @room.destroy
+    if @room.destroy!
+      flash[:success] = I18n.t('controllers.rooms.destroy.success')
 
-    flash[:success] = I18n.t('controllers.rooms.update.success')
+      redirect_to(rooms_path)
+    else
+      flash[:error] = I18n.t('controllers.rooms.destroy.error')
 
-    redirect_to(rooms_path)
+      redirect_to(room_path(@room))
+    end
   end
 
   private
@@ -51,8 +59,6 @@ class RoomsController < ApplicationController
     end
 
     def room_params
-      params.require(:room).permit(
-        :name
-      )
+      params.require(:room).permit(:name)
     end
 end

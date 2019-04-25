@@ -1,0 +1,4 @@
+pt-BR:
+  switches:
+    edit:
+      title: "Edição do Switches %{switch_name}"

@@ -1,0 +1,8 @@
+pt-BR:
+  switches:
+    index:
+      title: "Lista de Switches"
+      new: "Novo"
+      card:
+        name: "Switch %{switch_name}"
+        details: "Ver detalhes"
