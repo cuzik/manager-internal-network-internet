@@ -1,7 +1,7 @@
 pt-BR:
-  rooms:
+  computers:
     show:
-      title: "Informações sobre a Sala %{room_name}"
+      title: "Informações sobre o Computador %{computer_name}"
       back: "Voltar"
       edit: "Editar"
       delete: "Deletar"

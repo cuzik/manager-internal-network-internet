@@ -1,0 +1,4 @@
+pt-BR:
+  computers:
+    edit:
+      title: "Edição do Computedor %{computer_name}"

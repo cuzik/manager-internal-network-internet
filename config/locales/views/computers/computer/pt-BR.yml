@@ -1,0 +1,6 @@
+pt-BR:
+  computers:
+    computer:
+      card:
+        name: "Computador %{computer_name}"
+        details: "Ver detalhes"
