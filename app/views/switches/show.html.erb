@@ -12,25 +12,25 @@
       <div class="form-group">
         <div class="form-row">
           <div class="col-md-6">
-            <div class="form-label-group">
+            <div class="form-group">
               <%= form.label :name %>
               <%= form.text_field :name, disabled: true, class: "form-control" %>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="form-label-group">
+            <div class="form-group">
               <%= form.label :mac_address %>
               <%= form.text_field :mac_address, disabled: true, class: "form-control" %>
             </div>
           </div>
         </div>
       </div>
-
       <div class="float-right">
         <%= link_to(t('.back'), switches_path, class: "btn btn-primary") %>
         <%= link_to(t('.edit'), edit_switch_path(@switch), class: "btn btn-primary") %>
       </div>
     <% end %>
-
   </div>
 </div>
+
+<%= render('ports', ports: @ports) %>

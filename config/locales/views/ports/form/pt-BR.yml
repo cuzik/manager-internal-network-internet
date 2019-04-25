@@ -1,0 +1,8 @@
+pt-BR:
+  ports:
+    form:
+      back: "Voltar"
+      edit:
+        confirm: "Atualizar"
+      new:
+        confirm: "Criar"

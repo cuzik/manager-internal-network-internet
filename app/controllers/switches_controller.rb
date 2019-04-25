@@ -6,6 +6,7 @@ class SwitchesController < ApplicationController
   end
 
   def show
+    @ports = @switch.ports
   end
 
   def new

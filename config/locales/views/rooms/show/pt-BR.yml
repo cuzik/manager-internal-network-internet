@@ -5,3 +5,9 @@ pt-BR:
       back: "Voltar"
       edit: "Editar"
       delete: "Deletar"
+      port:
+        title: "Lista de Portas"
+        new: "Novo"
+        card:
+          name: "Porta %{port_number}"
+          details: "Ver detalhes"

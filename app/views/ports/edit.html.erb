@@ -1,9 +1,9 @@
 <div class="card mb-3">
   <div class="card-header">
     <%= icon('fas','home', class: 'fa-fw h2') %>
-    <span class="h4"> <%= t('.title') %> </span>
+    <span class="h4"> <%= t('.title', port_number: @port.number) %> </span>
   </div>
   <div class="card-body">
-    <%= render('form', switch: @switch) %>
+    <%= render 'form', port: @port %>
   </div>
 </div>

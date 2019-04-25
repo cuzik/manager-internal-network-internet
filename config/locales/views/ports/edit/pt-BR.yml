@@ -1,0 +1,4 @@
+pt-BR:
+  ports:
+    edit:
+      title: "Edição da Porta %{port_number}"

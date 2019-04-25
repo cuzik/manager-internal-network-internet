@@ -1,0 +1,38 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <%= icon('fas','home', class: 'fa-fw h2') %>
+    <span class="h4">
+      <%= t('.title', port_number: @port.number) %>
+    </span>
+    <%= link_to(t('.delete'), @port, method: :delete, class: "btn btn-danger float-right") %>
+  </div>
+  <div class="card-body">
+    <%= form_with(model: @port, local: true) do |form| %>
+
+      <div class="form-group">
+        <%= form.label :number %>
+        <%= form.text_field :number, disabled: true, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox">
+          <%= form.label :editabled %>:
+          <%= @port.editabled? ? "Sim" : "Não" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox">
+          <%= form.label :enabled %>:
+          <%= @port.enabled? ? "Sim" : "Não" %>
+        </div>
+      </div>
+
+      <div class="float-right">
+        <%= link_to(t('.back'), switches_path(@port.switch), class: "btn btn-primary") %>
+        <%= link_to(t('.edit'), edit_port_path(@port), class: "btn btn-primary") %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

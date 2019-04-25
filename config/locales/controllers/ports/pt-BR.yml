@@ -1,0 +1,12 @@
+pt-BR:
+  controllers:
+    ports:
+      create:
+        success: "Criado com sucesso"
+        error: "Erro ao Criar"
+      update:
+        success: "Atualizado com sucesso"
+        error: "Erro ao Atualizar"
+      destroy:
+        success: "Destruído com sucesso"
+        error: "Erro ao Destruir"

@@ -1,0 +1,7 @@
+pt-BR:
+  ports:
+    show:
+      title: "Infoemações sobre a Porta %{port_number}"
+      back: "Voltar"
+      edit: "Editar"
+      delete: "Deletar"
