@@ -6,6 +6,7 @@ class CreateComputers < ActiveRecord::Migration[5.2]
       t.string :ip, null: false, default: ""
       t.boolean :owner, null: false, default: false
 
+      t.belongs_to :account, index: true, null: false
       t.belongs_to :room, index: true
       t.belongs_to :port, index: true
 

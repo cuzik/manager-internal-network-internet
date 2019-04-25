@@ -2,7 +2,7 @@ class SwitchesController < ApplicationController
   before_action :set_switch, only: [:show, :edit, :update, :destroy]
 
   def index
-    @switches = Switch.all
+    @switches = current_account.switches
   end
 
   def show
@@ -17,7 +17,7 @@ class SwitchesController < ApplicationController
   end
 
   def create
-    @switch = Switch.new(switch_params)
+    @switch = current_account.switches.new(switch_params)
 
     if @switch.save
       flash[:success] = I18n.t('controllers.switches.create.success')

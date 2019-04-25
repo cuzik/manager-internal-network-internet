@@ -26,10 +26,12 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.string "mac_address", default: "", null: false
     t.string "ip", default: "", null: false
     t.boolean "owner", default: false, null: false
-    t.bigint "room_id", null: false
-    t.bigint "port_id", null: false
+    t.bigint "account_id", null: false
+    t.bigint "room_id"
+    t.bigint "port_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_computers_on_account_id"
     t.index ["ip"], name: "index_computers_on_ip", unique: true
     t.index ["mac_address"], name: "index_computers_on_mac_address", unique: true
     t.index ["name"], name: "index_computers_on_name", unique: true
@@ -59,8 +61,10 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
   create_table "switches", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "mac_address", default: "", null: false
+    t.bigint "account_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_switches_on_account_id"
     t.index ["mac_address"], name: "index_switches_on_mac_address", unique: true
     t.index ["name"], name: "index_switches_on_name", unique: true
   end
