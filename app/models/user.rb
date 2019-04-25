@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :account
+
+  validates :cpf, presence: true, uniqueness: true
 end

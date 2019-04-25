@@ -21,7 +21,7 @@ class PortsController < ApplicationController
     if @port.save
       flash[:success] = I18n.t('controllers.ports.create.success')
 
-      redirect_to(ports_path)
+      redirect_to(switch_path(port_params[:switch_id]))
     else
       flash[:error] = I18n.t('controllers.ports.create.error')
 
@@ -42,10 +42,11 @@ class PortsController < ApplicationController
   end
 
   def destroy
+    switch_id = @port.switch.id
     if @port.destroy!
       flash[:success] = I18n.t('controllers.ports.destroy.success')
 
-      redirect_to(ports_path)
+      redirect_to(switch_path(switch_id))
     else
       flash[:error] = I18n.t('controllers.ports.destroy.error')
 

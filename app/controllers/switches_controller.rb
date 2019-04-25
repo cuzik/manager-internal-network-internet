@@ -11,6 +11,7 @@ class SwitchesController < ApplicationController
 
   def new
     @switch = Switch.new
+    @switches = current_account.switches
   end
 
   def edit
