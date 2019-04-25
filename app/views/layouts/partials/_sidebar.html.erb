@@ -27,7 +27,11 @@
           <span>Salas</span>
         <% end %>
         <%= link_to(switches_path, class:'dropdown-item') do %>
-          <%= icon('fab','sith') %>
+          <%= icon('fas','network-wired') %>
+          <span>Switch</span>
+        <% end %>
+        <%= link_to(computers_path, class:'dropdown-item') do %>
+          <%= icon('fas','laptop-code') %>
           <span>Switch</span>
         <% end %>
       </div>
