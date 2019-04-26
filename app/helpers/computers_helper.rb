@@ -1,6 +1,5 @@
 module ComputersHelper
   def class_color_computer(computer)
-    return "bg-white"
     if computer.port.nil?
       "bg-warning"
     else
