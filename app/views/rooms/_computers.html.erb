@@ -2,11 +2,11 @@
   <div class="card-header">
     <%= icon('fas','home', class: 'fa-fw h2') %>
     <span class="h4"> <%= t('.title') %> </span>
-    <%= link_to(t('.new'), new_port_path, class: "btn btn-primary float-right") %>
+    <%= link_to(t('.new'), new_computer_path, class: "btn btn-primary float-right") %>
   </div>
   <div class="card-body">
     <div class="row">
-      <%= render(@ports) %>
+      <%= render(@computers) %>
     </div>
   </div>
 </div>

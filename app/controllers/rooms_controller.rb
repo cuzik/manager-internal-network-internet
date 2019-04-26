@@ -6,6 +6,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @computers = @room.computers.order(:name)
   end
 
   def new

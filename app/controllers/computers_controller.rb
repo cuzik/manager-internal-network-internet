@@ -2,7 +2,7 @@ class ComputersController < ApplicationController
   before_action :set_computer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @computers = current_account.computers
+    @computers = current_account.computers.order(:name)
   end
 
   def show

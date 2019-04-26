@@ -28,12 +28,14 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.boolean "owner", default: false, null: false
     t.bigint "account_id", null: false
     t.bigint "room_id"
+    t.bigint "port_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_computers_on_account_id"
     t.index ["ip"], name: "index_computers_on_ip", unique: true
     t.index ["mac_address"], name: "index_computers_on_mac_address", unique: true
     t.index ["name"], name: "index_computers_on_name", unique: true
+    t.index ["port_id"], name: "index_computers_on_port_id"
     t.index ["room_id"], name: "index_computers_on_room_id"
   end
 

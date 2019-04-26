@@ -1,0 +1,5 @@
+pt-BR:
+  rooms:
+    computers:
+      title: "Lista de Computadores"
+      new: "Nova"

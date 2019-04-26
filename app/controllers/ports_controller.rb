@@ -1,15 +1,15 @@
 class PortsController < ApplicationController
   before_action :set_port, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @ports = current_account.switches.flat_map{|switch| switch.ports}
+  end
+
   def show
   end
 
   def new
-    if(params[:switch_id].present?)
-      @port = Switch.find(params[:switch_id]).ports.new
-    else
-      @port = Port.new
-    end
+    @port = Port.new
   end
 
   def edit
