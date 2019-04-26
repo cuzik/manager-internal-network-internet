@@ -23,7 +23,6 @@ module ManagerInternalNetworkInternet
     config.load_defaults 5.2
     config.assets.paths << Rails.root.join('node_modules')
 
-    config.action_view.raise_on_missing_translations = true
     config.i18n.default_locale = 'pt-BR'
     config.i18n.fallbacks = ['pt-BR']
     config.i18n.available_locales = ['pt-BR', :en]
