@@ -9,4 +9,5 @@ class Computer < ApplicationRecord
   validates :mac_address, presence: true, uniqueness: true
   validates :ip, presence: true, uniqueness: true
   validates :port_id, uniqueness: true, allow_blank: true, allow_nil: true
+  validates_format_of :mac_address, with: /\A^([0-9a-fA-F]{2}[:-]){5}[0-9a-fA-F]{2}$\Z/i, on: :create, on: :update, message: "Não irmãozinho"
 end
