@@ -1,10 +1,9 @@
 pt-BR:
-  views:
-    layouts:
-      sidebar:
-        exemplo: "Exemplo"
-        admin: "Admin"
-        rooms: "Salas"
-        switches: "Switches"
-        computers: "Computadores"
-        log_out: "Sair"
+  layouts:
+    sidebar:
+      exemplo: "Exemplo"
+      admin: "Admin"
+      rooms: "Salas"
+      switches: "Switches"
+      computers: "Computadores"
+      log_out: "Sair"

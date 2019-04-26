@@ -6,7 +6,7 @@ class SwitchesController < ApplicationController
   end
 
   def show
-    @ports = @switch.ports
+    @ports = @switch.ports.order(:number)
   end
 
   def new

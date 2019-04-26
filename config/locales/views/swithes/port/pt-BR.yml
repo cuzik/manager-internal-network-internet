@@ -2,5 +2,6 @@ pt-BR:
   switches:
     port:
       card:
-        name: "Porta %{port_number}"
+        title: "Porta"
+        name: "Número: %{port_number}"
         details: "Ver detalhes"
