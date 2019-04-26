@@ -1,0 +1,7 @@
+pt-BR:
+  layouts:
+    partials:
+      navbar:
+        settings: "Configurações"
+        log_list: "Lista de logs"
+        log_out: "Sair"

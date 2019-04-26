@@ -1,4 +1,5 @@
 pt-BR:
   layouts:
-    footer:
-      copyright: "Copyright © Mini 2019"
+    partials:
+      footer:
+        copyright: "Copyright © Mini 2019"
