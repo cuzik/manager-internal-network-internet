@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update, :destroy]
 
   def index
-    @rooms = current_account.rooms
+    @rooms = current_account.rooms.order(:name)
   end
 
   def show

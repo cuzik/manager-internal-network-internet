@@ -2,7 +2,7 @@ class SwitchesController < ApplicationController
   before_action :set_switch, only: [:show, :edit, :update, :destroy]
 
   def index
-    @switches = current_account.switches
+    @switches = current_account.switches.order(:name)
   end
 
   def show

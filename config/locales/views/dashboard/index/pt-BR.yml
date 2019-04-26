@@ -1,0 +1,17 @@
+pt-BR:
+  dashboard:
+    admin_panel:
+      title: "Painel de Administração"
+      card:
+        computers:
+          title: "Computadores"
+        rooms:
+          title: "Salas"
+        switches:
+          title: "Switches"
+        ports:
+          title: "Portas"
+        details: "Ver detalhes"
+        count:
+          one: "1 Registro encontrado"
+          other: "%{count} Registros encontrados"
