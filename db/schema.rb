@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_26_043853) do
+ActiveRecord::Schema.define(version: 2019_04_24_011914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,14 +28,12 @@ ActiveRecord::Schema.define(version: 2019_04_26_043853) do
     t.boolean "owner", default: false, null: false
     t.bigint "account_id", null: false
     t.bigint "room_id"
-    t.bigint "port_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_computers_on_account_id"
     t.index ["ip"], name: "index_computers_on_ip", unique: true
     t.index ["mac_address"], name: "index_computers_on_mac_address", unique: true
     t.index ["name"], name: "index_computers_on_name", unique: true
-    t.index ["port_id"], name: "index_computers_on_port_id"
     t.index ["room_id"], name: "index_computers_on_room_id"
   end
 
@@ -81,9 +79,7 @@ ActiveRecord::Schema.define(version: 2019_04_26_043853) do
     t.string "cpf", default: "", null: false
     t.boolean "owner", default: false, null: false
     t.bigint "account_id", null: false
-    t.bigint "computer_id"
     t.index ["account_id"], name: "index_users_on_account_id"
-    t.index ["computer_id"], name: "index_users_on_computer_id"
     t.index ["cpf"], name: "index_users_on_cpf", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
