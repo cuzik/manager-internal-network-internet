@@ -8,7 +8,6 @@ class CreateComputers < ActiveRecord::Migration[5.2]
 
       t.belongs_to :account, index: true, null: false
       t.belongs_to :room, index: true
-      t.belongs_to :port, index: true
 
       t.timestamps
     end
