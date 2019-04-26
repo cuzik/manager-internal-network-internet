@@ -60,7 +60,7 @@
       </div>
 
       <div class="float-right">
-        <%= link_to(t('.back'), computers_path, class: "btn btn-primary") %>
+        <%= link_to(t('.back'), params[:back_to_room] == 'true' ? @computer.room : computers_path(), class: "btn btn-primary") %>
         <%= link_to(t('.edit'), edit_computer_path(@computer), class: "btn btn-primary") %>
       </div>
     <% end %>

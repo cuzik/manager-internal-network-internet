@@ -36,7 +36,7 @@
       </div>
 
       <div class="float-right">
-        <%= link_to(t('.back'), switches_path(@port.switch), class: "btn btn-primary") %>
+        <%= link_to(t('.back'), params[:back_to_swith] == 'true' ? @port.switch : ports_path(), class: "btn btn-primary") %>
         <%= link_to(t('.edit'), edit_port_path(@port), class: "btn btn-primary") %>
       </div>
     <% end %>

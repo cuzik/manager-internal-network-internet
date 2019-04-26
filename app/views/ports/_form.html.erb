@@ -33,12 +33,7 @@
     </div>
   </div>
   <div class="float-right">
-    <% if !port.number.zero? %>
-      <%= link_to(t('.back'), port_path(port), class: "btn btn-primary") %>
-      <%= form.submit t('.edit.confirm'), class:"btn btn-success" %>
-    <% else %>
-      <%= link_to(t('.back'), switches_path, class: "btn btn-primary") %>
-      <%= form.submit t('.new.confirm'), class:"btn btn-success" %>
-    <% end %>
+    <%= link_to(t('.back'), :back, class: "btn btn-primary") %>
+    <%= form.submit !port.number.zero? ? t('.edit.confirm') : t('.new.confirm'), class:"btn btn-success" %>
   </div>
 <% end %>

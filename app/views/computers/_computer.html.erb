@@ -7,7 +7,7 @@
       </div>
       <div class="mr-5"><%= t('.card.name', computer_name: computer.name) %></div>
     </div>
-    <%=link_to(computer, class: 'card-footer text-dark clearfix small z-1') do%>
+    <%=link_to(computer_path(computer, back_to_room: back_to_room.present?), class: 'card-footer text-dark clearfix small z-1') do%>
       <span class="float-left"><%= t('.card.details') %></span>
       <span class="float-right">
         <%= icon('fas','angle-right') %>

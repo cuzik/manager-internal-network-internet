@@ -7,7 +7,7 @@
       </div>
       <div class="mr-5"><%= t('.card.name', port_number: port.number) %></div>
     </div>
-    <%=link_to(port, class: 'card-footer text-white clearfix small z-1') do%>
+    <%=link_to(port_path(port, back_to_swith: back_to_swith.present?), class: 'card-footer text-white clearfix small z-1') do%>
       <span class="float-left"><%= t('.card.details') %></span>
       <span class="float-right">
         <%= icon('fas','angle-right') %>

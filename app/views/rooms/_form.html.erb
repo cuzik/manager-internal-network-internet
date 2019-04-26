@@ -10,11 +10,7 @@
   </div>
 
   <div class="float-right">
-    <%= link_to(t('.back'), rooms_path, class: "btn btn-primary") %>
-    <% if room.name.present? %>
-      <%= form.submit t('.edit.confirm'), class:"btn btn-success" %>
-    <% else %>
-      <%= form.submit t('.new.confirm'), class:"btn btn-success" %>
-    <% end %>
+    <%= link_to(t('.back'), :back, class: "btn btn-primary") %>
+    <%= form.submit room.name.present? ? t('.edit.confirm') : t('.new.confirm'), class:"btn btn-success" %>
   </div>
 <% end %>
