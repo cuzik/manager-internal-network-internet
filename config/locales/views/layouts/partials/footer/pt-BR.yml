@@ -1,0 +1,5 @@
+pt-BR:
+  views:
+    layouts:
+      footer:
+        copyright: "Copyright © Mini 2019"

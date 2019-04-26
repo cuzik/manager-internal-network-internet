@@ -36,8 +36,8 @@
     </div>
     <div class="col-md-4">
       <div class="form-group">
-        <%= form.label(:room_id) %>
-        <%= form.select(:room_id, current_user.account.rooms.collect { |room| [room.name, room.id] }, {}, class: "form-control") %>
+        <%= form.label(:port_id) %>
+        <%= form.select(:port_id, Ports.all.collect { |port| [port.name, port.id] }, {}, class: "form-control") %>
       </div>
     </div>
   </div>

@@ -3,14 +3,7 @@
   <li class="nav-item active">
     <%= link_to('#', class:'nav-link') do %>
       <%= icon('far','address-card') %>
-      <span> MENU <%= current_user.owner? ? "Admin" : "" %> </span>
-    <% end %>
-  </li>
-
-  <li class="nav-item">
-    <%= link_to(dashboard_index_path, class:'nav-link') do %>
-      <%= icon('fas','undo-alt') %>
-      <span>alguma coisa</span>
+      <span><%= t('.exemplo') %></span>
     <% end %>
   </li>
 
@@ -19,20 +12,20 @@
       <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <%= icon('fas','key') %>
-        <span>Admin</span>
+        <span><%= t('.admin') %></span>
       </a>
       <div class="dropdown-menu" aria-labelledby="adminDropdown">
         <%= link_to(rooms_path, class:'dropdown-item') do %>
           <%= icon('fas','home') %>
-          <span>Salas</span>
+          <span><%= t('.rooms') %></span>
         <% end %>
         <%= link_to(switches_path, class:'dropdown-item') do %>
           <%= icon('fas','network-wired') %>
-          <span>Switch</span>
+          <span><%= t('.switches') %></span>
         <% end %>
         <%= link_to(computers_path, class:'dropdown-item') do %>
           <%= icon('fas','laptop-code') %>
-          <span>Switch</span>
+          <span><%= t('.computers') %></span>
         <% end %>
       </div>
     </li>
@@ -41,7 +34,7 @@
   <li class="nav-item">
     <%= link_to(destroy_user_session_path, method: :delete, class:'nav-link') do %>
       <%= icon('fas','sign-out-alt') %>
-      <span>Sair</span>
+      <span><%= t('log_out') %></span>
     <% end %>
   </li>
 </ul>

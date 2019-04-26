@@ -7,20 +7,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag('application', media: 'all', 'data-turbolinks-track': 'reload') %>
+    <%= javascript_include_tag('application', 'data-turbolinks-track': 'reload') %>
   </head>
 
   <body>
-    <%= render "layouts/partials/navbar" %>
-    <%= render 'flashes' %>
+    <%= render("layouts/partials/navbar") %>
+    <%= render("flashes") %>
     <div id="wrapper">
-      <%= render "layouts/partials/sidebar" %>
+      <%= render("layouts/partials/sidebar") %>
       <div id="content-wrapper">
         <div class="container-fluid">
           <%= yield %>
         </div>
-        <%= render "layouts/partials/footer" %>
+        <%= render("layouts/partials/footer") %>
       </div>
     </div>
   </body>
