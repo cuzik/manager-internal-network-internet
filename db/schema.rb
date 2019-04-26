@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
   create_table "ports", force: :cascade do |t|
     t.integer "number", default: 0, null: false
     t.boolean "enabled", default: true, null: false
-    t.boolean "editabled", default: true, null: false
+    t.boolean "editable", default: true, null: false
     t.bigint "switch_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

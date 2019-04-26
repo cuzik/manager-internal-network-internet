@@ -1,6 +1,6 @@
 module PortsHelper
   def class_color_port(port)
-    unless port.editabled?
+    unless port.editable?
       "bg-secondary"
     else
       port.enabled? ? "bg-success" : "bg-danger"

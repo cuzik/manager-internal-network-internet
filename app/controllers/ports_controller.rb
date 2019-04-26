@@ -60,6 +60,6 @@ class PortsController < ApplicationController
     end
 
     def port_params
-      params.require(:port).permit(:number, :enabled, :editabled, :switch_id)
+      params.require(:port).permit(:number, :enabled, :editable, :switch_id)
     end
 end
