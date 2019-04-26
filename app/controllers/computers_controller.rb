@@ -64,8 +64,8 @@ class ComputersController < ApplicationController
         :mac_address,
         :ip,
         :owner,
-        :room,
-        :port
+        :room_id,
+        :port_id
       )
     end
 end

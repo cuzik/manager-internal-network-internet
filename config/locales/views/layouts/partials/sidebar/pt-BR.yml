@@ -6,4 +6,5 @@ pt-BR:
       rooms: "Salas"
       switches: "Switches"
       computers: "Computadores"
+      ports: "Portas"
       log_out: "Sair"
