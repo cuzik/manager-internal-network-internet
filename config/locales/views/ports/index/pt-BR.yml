@@ -1,0 +1,5 @@
+pt-BR:
+  ports:
+    index:
+      title: "Lista de Portas"
+      new: "Novo"
