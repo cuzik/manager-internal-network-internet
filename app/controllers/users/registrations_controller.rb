@@ -7,6 +7,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     build_resource(sign_up_params)
 
     resource.account = Account.new(name: params[:user][:account])
+    resource.owner = true
 
     resource.save
     yield resource if block_given?
