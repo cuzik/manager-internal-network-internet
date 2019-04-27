@@ -2,6 +2,10 @@ require "rails_helper"
 
 RSpec.describe PortsController, type: :routing do
   describe "routing" do
+    it "routes to #index" do
+      expect(:get => "/ports").to route_to("ports#index")
+    end
+
     it "routes to #new" do
       expect(:get => "/ports/new").to route_to("ports#new")
     end

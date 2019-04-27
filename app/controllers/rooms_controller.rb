@@ -26,7 +26,7 @@ class RoomsController < ApplicationController
   def create
     @room = current_account.rooms.new(room_params)
 
-    authorize @rooms
+    authorize @room
 
     if @room.save
       flash[:success] = I18n.t('controllers.rooms.create.success')

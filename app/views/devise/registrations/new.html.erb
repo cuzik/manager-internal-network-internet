@@ -1,7 +1,7 @@
 <div class="card card-singup mx-auto mt-5">
   <div class="card-header">
     <%= icon('fas','user-plus', class: 'fa-fw h2') %>
-    <span class="h4"> Registrar </span>
+    <span class="h4"><%= t('.sign_up') %></span>
   </div>
   <div class="card-body">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
@@ -42,6 +42,7 @@
           <div class="form-group">
             <%= form.label(:password) %>
             <%= form.password_field(:password, autocomplete: "new-password", class: "form-control") %>
+            <small><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
           </div>
           </div>
         <div class="col-md-6">
@@ -52,7 +53,7 @@
         </div>
       </div>
 
-      <%= form.submit("Sign up", class: "btn btn-primary btn-block") %>
+      <%= form.submit(t('.sign_up'), class: "btn btn-primary btn-block") %>
     <% end %>
   </div>
   <div class="card-footer clearfix small z-1">
