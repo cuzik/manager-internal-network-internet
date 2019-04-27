@@ -1,0 +1,2 @@
+class ComputerPolicy < ApplicationPolicy
+end

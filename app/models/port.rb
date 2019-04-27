@@ -1,5 +1,6 @@
 class Port < ApplicationRecord
   belongs_to :switch
+  has_one :account, through: :switch
 
   has_one :computer
 

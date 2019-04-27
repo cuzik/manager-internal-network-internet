@@ -3,22 +3,30 @@ class SwitchesController < ApplicationController
 
   def index
     @switches = current_account.switches.order(:name)
+
+    authorize @switches
   end
 
   def show
+    authorize @switch
+
     @ports = @switch.ports.order(:number)
   end
 
   def new
+    authorize Switch
+
     @switch = Switch.new
-    @switches = current_account.switches
   end
 
   def edit
+    authorize @switch
   end
 
   def create
     @switch = current_account.switches.new(switch_params)
+
+    authorize @switch
 
     if @switch.save
       flash[:success] = I18n.t('controllers.switches.create.success')
@@ -27,11 +35,13 @@ class SwitchesController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.switches.create.error')
 
-      redirect_to(new_switch_path)
+      render(:new)
     end
   end
 
   def update
+    authorize @switch
+
     if @switch.update(switch_params)
       flash[:success] = I18n.t('controllers.switches.update.success')
 
@@ -44,6 +54,8 @@ class SwitchesController < ApplicationController
   end
 
   def destroy
+    authorize @switch
+
     if @switch.destroy!
       flash[:success] = I18n.t('controllers.switches.destroy.success')
 

@@ -8,6 +8,7 @@ gem 'devise-i18n', '~> 1.6.4'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
+gem "pundit"
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass', '~> 5.8.1'

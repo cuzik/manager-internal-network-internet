@@ -2,13 +2,18 @@ class PortsController < ApplicationController
   before_action :set_port, only: [:show, :edit, :update, :destroy]
 
   def index
-    @ports = current_account.switches.flat_map{|switch| switch.ports}
+    @ports = current_account.ports
+
+    authorize @ports
   end
 
   def show
+    authorize @port
   end
 
   def new
+    authorize Port
+
     @port = Port.new
   end
 
@@ -17,6 +22,8 @@ class PortsController < ApplicationController
 
   def create
     @port = Port.new(port_params)
+
+    authorize @port
 
     if @port.save
       flash[:success] = I18n.t('controllers.ports.create.success')
@@ -30,6 +37,8 @@ class PortsController < ApplicationController
   end
 
   def update
+    authorize @port
+
     if @port.update(port_params)
       flash[:success] = I18n.t('controllers.ports.update.success')
 
@@ -37,11 +46,13 @@ class PortsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.ports.update.error')
 
-      redirect_to(edit_port_path)
+      render(:new)
     end
   end
 
   def destroy
+    authorize @port
+
     switch_id = @port.switch.id
     if @port.destroy!
       flash[:success] = I18n.t('controllers.ports.destroy.success')

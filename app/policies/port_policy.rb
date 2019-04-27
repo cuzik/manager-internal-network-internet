@@ -1,0 +1,2 @@
+class PortPolicy < ApplicationPolicy
+end

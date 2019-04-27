@@ -3,20 +3,27 @@ class ComputersController < ApplicationController
 
   def index
     @computers = current_account.computers.order(:name)
+
+    authorize @computers
   end
 
   def show
+    authorize @computer
   end
 
   def new
+    authorize Computer
+
     @computer = Computer.new
   end
 
   def edit
+    authorize @computer
   end
 
   def create
     @computer = current_account.computers.new(computer_params)
+    authorize @computer
 
     if @computer.save
       flash[:success] = I18n.t('controllers.computers.create.success')
@@ -25,11 +32,13 @@ class ComputersController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.computers.create.error')
 
-      redirect_to(new_computer_path)
+      render(:new)
     end
   end
 
   def update
+    authorize @computer
+
     if @computer.update(computer_params)
       flash[:success] = I18n.t('controllers.computers.update.success')
 
@@ -42,6 +51,8 @@ class ComputersController < ApplicationController
   end
 
   def destroy
+    authorize @computer
+
     if @computer.destroy!
       flash[:success] = I18n.t('controllers.computers.destroy.success')
 

@@ -3,21 +3,30 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = current_account.rooms.order(:name)
+
+    authorize @rooms
   end
 
   def show
+    authorize @room
+
     @computers = @room.computers.order(:name)
   end
 
   def new
+    authorize Room
+
     @room = Room.new
   end
 
   def edit
+    authorize @rooms
   end
 
   def create
     @room = current_account.rooms.new(room_params)
+
+    authorize @rooms
 
     if @room.save
       flash[:success] = I18n.t('controllers.rooms.create.success')
@@ -26,11 +35,13 @@ class RoomsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.rooms.create.error')
 
-      redirect_to(new_room_path)
+      render(:new)
     end
   end
 
   def update
+    authorize @rooms
+
     if @room.update(room_params)
       flash[:success] = I18n.t('controllers.rooms.update.success')
 
@@ -43,6 +54,8 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+    authorize @rooms
+
     if @room.destroy!
       flash[:success] = I18n.t('controllers.rooms.destroy.success')
 

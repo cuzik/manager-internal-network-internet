@@ -1,0 +1,2 @@
+class SwitchPolicy < ApplicationPolicy
+end
