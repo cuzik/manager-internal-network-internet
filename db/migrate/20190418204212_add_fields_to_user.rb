@@ -3,7 +3,7 @@ class AddFieldsToUser < ActiveRecord::Migration[5.2]
     change_table :users do |t|
       t.string :name, null: false, default: ""
       t.string :cpf, null: false, default: ""
-      t.boolean :owner, null: false, default: false
+      t.boolean :owner, null: false, default: true
 
       t.belongs_to :account, index: true, null: false
     end

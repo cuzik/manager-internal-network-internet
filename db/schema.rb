@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 2019_04_24_011914) do
     t.datetime "updated_at", null: false
     t.string "name", default: "", null: false
     t.string "cpf", default: "", null: false
-    t.boolean "owner", default: false, null: false
+    t.boolean "owner", default: true, null: false
     t.bigint "account_id", null: false
     t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["cpf"], name: "index_users_on_cpf", unique: true
