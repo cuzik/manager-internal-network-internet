@@ -1,15 +1,29 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the PortsHelper. For example:
-#
-# describe PortsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe PortsHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:port) {create(:port)}
+
+  context('When the port have editable false') do
+    it('should #class_color_port returns "bg-secondary"') do
+      port.update(editable: false)
+
+      expect(class_color_port(port)).to eq('bg-secondary')
+    end
+  end
+
+  context('When the port have editable true') do
+    context("and have enabled true") do
+      it('should #class_color_port returns "bg-success"') do
+        expect(class_color_port(port)).to eq('bg-success')
+      end
+    end
+
+    context("and have enabled false") do
+      it('should #class_color_port returns "bg-danger"') do
+        port.update(enabled: false)
+
+        expect(class_color_port(port)).to eq('bg-danger')
+      end
+    end
+  end
 end

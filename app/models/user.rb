@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   belongs_to :account
 
-  validates :cpf, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :cpf, presence: true, uniqueness: { case_sensitive: false }
 end
