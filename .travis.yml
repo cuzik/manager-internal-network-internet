@@ -1,16 +1,26 @@
 language: ruby
 rvm:
 - 2.6.2
+cache:
+  yarn: true
+  directories:
+  - ".eslintcache"
+  - node_modules
 install:
 - bundle install
+- nvm install node
+- node -v
+- npm i -g yarn
+- yarn
 before_script:
-- cp config/database.sample.yml config/database.yml
-- sudo sed -i 's/port = 5433/port = 5432/' /etc/postgresql/10/main/postgresql.conf
+- cp config/database.example.yml config/database.yml
+- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
 - sudo service postgresql restart
 - sudo psql -c "create database mission_us_test;" -U postgres
 script:
-- rails db:migrate RAILS_ENV=test
-- bundle exec rails
+- bin/rake db:migrate RAILS_ENV=test
+- yarn test
+- bundle exec rake
 addons:
   postgresql: '10'
   apt:
