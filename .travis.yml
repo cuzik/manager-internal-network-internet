@@ -13,7 +13,7 @@ install:
 - npm i -g yarn
 - yarn
 before_script:
-- cp config/database.example.yml config/database.yml
+- cp config/database.sample.yml config/database.yml
 - sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
 - sudo service postgresql restart
 - sudo psql -c "create database mission_us_test;" -U postgres
