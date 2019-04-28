@@ -9,8 +9,8 @@ before_script:
 - sudo service postgresql restart
 - sudo psql -c "create database mission_us_test;" -U postgres
 script:
-- bin/rake db:migrate RAILS_ENV=test
-- bundle exec rake
+- rails db:migrate RAILS_ENV=test
+- bundle exec rails
 addons:
   postgresql: '10'
   apt:
