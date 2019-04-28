@@ -1,4 +1,5 @@
 <%= form_with(model: room, local: true) do |form| %>
+  <%= render("messages/error_messages", record: room) %>
 
   <div class="form-group row">
     <div class="col-md-12">

@@ -1,4 +1,5 @@
 <%= form_with(model: switch, local: true) do |form| %>
+  <%= render("messages/errors_messages", record: switch) %>
 
   <div class="form-group">
     <div class="form-row">
