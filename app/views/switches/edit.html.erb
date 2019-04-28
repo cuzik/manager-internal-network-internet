@@ -1,7 +1,6 @@
 <div class="card mb-3 bg-dark text-light">
-  <div class="card-header">
-    <%= icon('fas','home', class: 'fa-fw h2') %>
-    <span class="h4"> <%= t('.title', switch_name: @switch.name) %> </span>
+  <div class="card-header h3">
+    <%= icon('fas','network-wired', t('.title', switch_name: @switch.name), class: 'fa-fw h2 mb-0') %>
   </div>
   <div class="card-body">
     <%= render 'form', switch: @switch %>

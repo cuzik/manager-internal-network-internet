@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :switches
   resources :computers
   resources :ports
+  namespace :account do
+    resources :users
+  end
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }

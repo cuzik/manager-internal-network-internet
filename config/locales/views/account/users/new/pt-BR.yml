@@ -1,0 +1,5 @@
+pt-BR:
+  account:
+    users:
+      new:
+        title: "Criação de um Novo usuário"

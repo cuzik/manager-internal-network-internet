@@ -1,7 +1,6 @@
 <div class="card mb-3 bg-dark text-light">
-  <div class="card-header">
-    <%= icon('fas','home', class: 'fa-fw h2') %>
-    <span class="h4"> <%= t('.title') %> </span>
+  <div class="card-header h3">
+    <%= icon('fas','desktop', t('.title', room_name: @room.name), class: 'fa-fw h2 mb-0') %>
     <%= link_to(t('.new'), new_computer_path, class: "btn btn-primary float-right") %>
   </div>
   <div class="card-body">

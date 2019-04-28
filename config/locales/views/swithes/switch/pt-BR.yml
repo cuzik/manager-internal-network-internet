@@ -3,5 +3,5 @@ pt-BR:
     switch:
       card:
         title: "Switch"
-        name: "Nome: %{switch_name}"
+        name: "%{switch_name}"
         details: "Ver detalhes"

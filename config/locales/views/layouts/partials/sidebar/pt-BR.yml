@@ -4,8 +4,9 @@ pt-BR:
       sidebar:
         exemplo: "Exemplo"
         admin: "Administração"
+        users: "Usuários"
+        computers: "Computadores"
         rooms: "Salas"
         switches: "Switches"
-        computers: "Computadores"
         ports: "Portas"
         log_out: "Sair"

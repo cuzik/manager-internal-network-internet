@@ -1,0 +1,9 @@
+pt-BR:
+  account:
+    users:
+      form:
+        back: "Voltar"
+        edit:
+          confirm: "Atualizar"
+        new:
+          confirm: "Criar"

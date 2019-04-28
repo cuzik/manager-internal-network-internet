@@ -3,5 +3,5 @@ pt-BR:
     room:
       card:
         title: "Sala"
-        name: "Nome: %{room_name}"
+        name: "%{room_name}"
         details: "Ver detalhes"

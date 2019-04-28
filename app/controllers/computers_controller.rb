@@ -23,12 +23,17 @@ class ComputersController < ApplicationController
 
   def create
     @computer = current_account.computers.new(computer_params)
+
     authorize @computer
 
     if @computer.save
       flash[:success] = I18n.t('controllers.computers.create.success')
 
-      redirect_to(computers_path)
+      if(port_params[:room_id].present)
+        redirect_to(room_path(port_params[:room_id]))
+      else
+        redirect_to(computers_path)
+      end
     else
       flash[:error] = I18n.t('controllers.computers.create.error')
 
@@ -46,21 +51,23 @@ class ComputersController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.computers.update.error')
 
-      redirect_to(edit_computer_path)
+      render(:edit)
     end
   end
 
   def destroy
     authorize @computer
 
+    room_id = @computer.room.id
     if @computer.destroy!
       flash[:success] = I18n.t('controllers.computers.destroy.success')
 
       redirect_to(computers_path)
+      redirect_to(room_path(room_id))
     else
       flash[:error] = I18n.t('controllers.computers.destroy.error')
 
-      redirect_to(computer_path(@computer))
+      redirect_to(@computer)
     end
   end
 

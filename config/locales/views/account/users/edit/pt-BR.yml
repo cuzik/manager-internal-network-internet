@@ -1,0 +1,5 @@
+pt-BR:
+  account:
+    users:
+      edit:
+        title: "Edição do Usuário %{user_name}"

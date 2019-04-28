@@ -49,7 +49,7 @@ class SwitchesController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.switches.update.error')
 
-      redirect_to(edit_switch_path)
+      render(:edit)
     end
   end
 
@@ -63,7 +63,7 @@ class SwitchesController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.switches.destroy.error')
 
-      redirect_to(switch_path(@switch))
+      redirect_to(@switch)
     end
 
   end

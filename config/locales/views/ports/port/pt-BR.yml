@@ -3,5 +3,5 @@ pt-BR:
     port:
       card:
         title: "Porta"
-        name: "Número: %{port_number}"
+        name: "%{port_number}"
         details: "Ver detalhes"

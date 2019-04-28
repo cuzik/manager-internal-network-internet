@@ -1,0 +1,11 @@
+<% if notice.present? %>
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <p class="mb-0">
+      <%= icon('fas', 'exclamation-circle', class: 'fa-fw h5 mb-0') %>
+      <%= notice %>
+    </p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>

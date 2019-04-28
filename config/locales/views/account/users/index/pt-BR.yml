@@ -1,0 +1,6 @@
+pt-BR:
+  account:
+    users:
+      index:
+        title: "Lista de Usuários"
+        new: "Novo"

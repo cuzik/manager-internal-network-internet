@@ -3,5 +3,5 @@ pt-BR:
     computer:
       card:
         title: "Computador"
-        name: "Nome: %{computer_name}"
+        name: "%{computer_name}"
         details: "Ver detalhes"

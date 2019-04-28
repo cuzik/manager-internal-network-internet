@@ -1,0 +1,8 @@
+pt-BR:
+  account:
+    users:
+      user:
+        card:
+          title: "Usuário"
+          name: "%{user_name}"
+          details: "Ver detalhes"

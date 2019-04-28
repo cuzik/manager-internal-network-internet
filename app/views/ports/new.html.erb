@@ -1,7 +1,6 @@
 <div class="card mb-3 bg-dark text-light">
-  <div class="card-header">
-    <%= icon('fas','home', class: 'fa-fw h2') %>
-    <span class="h4"> <%= t('.title') %> </span>
+  <div class="card-header h3">
+    <%= icon('fas','ethernet', t('.title'), class: 'fa-fw h2 mb-0') %>
   </div>
   <div class="card-body">
     <%= render 'form', port: @port %>

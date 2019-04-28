@@ -15,20 +15,28 @@
         <span><%= t('.admin') %></span>
       </a>
       <div class="dropdown-menu" aria-labelledby="adminDropdown">
+        <%= link_to(account_users_path, class:'dropdown-item') do %>
+          <%= icon('fas','user-astronaut') %>
+          <span><%= t('.users') %></span>
+        <% end %>
+
+        <%= link_to(computers_path, class:'dropdown-item') do %>
+          <%= icon('fas','desktop') %>
+          <span><%= t('.computers') %></span>
+        <% end %>
+
         <%= link_to(rooms_path, class:'dropdown-item') do %>
-          <%= icon('fas','home') %>
+          <%= icon('fas','igloo') %>
           <span><%= t('.rooms') %></span>
         <% end %>
+
         <%= link_to(switches_path, class:'dropdown-item') do %>
           <%= icon('fas','network-wired') %>
           <span><%= t('.switches') %></span>
         <% end %>
-        <%= link_to(computers_path, class:'dropdown-item') do %>
-          <%= icon('fas','laptop-code') %>
-          <span><%= t('.computers') %></span>
-        <% end %>
+
         <%= link_to(ports_path, class:'dropdown-item') do %>
-          <%= icon('fas','door-open') %>
+          <%= icon('fas','ethernet') %>
           <span><%= t('.ports') %></span>
         <% end %>
       </div>

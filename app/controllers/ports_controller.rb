@@ -46,7 +46,7 @@ class PortsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.ports.update.error')
 
-      render(:new)
+      render(:edit)
     end
   end
 
@@ -61,7 +61,7 @@ class PortsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.ports.destroy.error')
 
-      redirect_to(port_path(@port))
+      redirect_to(@port)
     end
   end
 

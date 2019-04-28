@@ -11,6 +11,8 @@ pt-BR:
           title: "Switches"
         ports:
           title: "Portas"
+        users:
+          title: "Usuários"
         details: "Ver detalhes"
         count:
           one: "1 Registro encontrado"

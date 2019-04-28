@@ -20,7 +20,7 @@ class RoomsController < ApplicationController
   end
 
   def edit
-    authorize @rooms
+    authorize @room
   end
 
   def create
@@ -40,7 +40,7 @@ class RoomsController < ApplicationController
   end
 
   def update
-    authorize @rooms
+    authorize @room
 
     if @room.update(room_params)
       flash[:success] = I18n.t('controllers.rooms.update.success')
@@ -49,12 +49,12 @@ class RoomsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.rooms.update.error')
 
-      redirect_to(edit_room_path)
+      render(:edit)
     end
   end
 
   def destroy
-    authorize @rooms
+    authorize @room
 
     if @room.destroy!
       flash[:success] = I18n.t('controllers.rooms.destroy.success')
@@ -63,7 +63,7 @@ class RoomsController < ApplicationController
     else
       flash[:error] = I18n.t('controllers.rooms.destroy.error')
 
-      redirect_to(room_path(@room))
+      redirect_to(@room)
     end
   end
 

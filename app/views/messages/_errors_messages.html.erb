@@ -1,7 +1,10 @@
 <% if record.errors.any? %>
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <% record.errors.full_messages.each do |message| %>
-      <p class="mb-0"><%= message %></p>
+      <p class="mb-0">
+        <%= icon('fas', 'times-circle', class: 'fa-fw h5 mb-0') %>
+        <%= message %>
+      </p>
     <% end %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
