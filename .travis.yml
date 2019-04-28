@@ -19,7 +19,6 @@ before_script:
 - sudo psql -c "create database mission_us_test;" -U postgres
 script:
 - bin/rake db:migrate RAILS_ENV=test
-- yarn test
 - bundle exec rake
 addons:
   postgresql: '10'
