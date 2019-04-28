@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.6.0
+- 2.6.2
 install:
 - bundle install
 before_script:
