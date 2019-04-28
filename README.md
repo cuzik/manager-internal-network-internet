@@ -1,5 +1,10 @@
 # Mini
 
+![APP-Mini](https://img.shields.io/badge/MiNi-Udesc-blue.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/cuzik/manager-internal-network-internet.svg)
+[![Build Status](https://travis-ci.org/cuzik/manager-internal-network-internet.svg?branch=master)](https://travis-ci.org/cuzik/manager-internal-network-internet)
+[![Coverage Status](https://coveralls.io/repos/github/cuzik/manager-internal-network-internet/badge.svg)](https://coveralls.io/github/cuzik/manager-internal-network-internet)
+
 Depois eu descrevo melhor o projeto aqui
 
 ## Data Base
