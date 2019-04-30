@@ -1,4 +1,9 @@
 language: ruby
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
 install:
 - bundle install
 - yarn install
