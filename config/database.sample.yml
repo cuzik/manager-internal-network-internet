@@ -6,10 +6,10 @@ default: &default
   username: <%= ENV['POSTGRESQL_USERNAME'] || 'postgres' %>
   password: <%= ENV['POSTGRESQL_PASSWORD'] || 'postgres' %>
   host: <%= ENV['POSTGRESQL_HOST'] || 'db' %>
-  port: <%= ENV['POSTGRESQL_PORT'] || 5432 %>
 
 development:
   <<: *default
+  port: <%= ENV['POSTGRESQL_PORT'] || 5432 %>
   database: mini_development
 
 test:
