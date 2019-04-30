@@ -18,6 +18,6 @@
 //= require_tree .
 //= require popper
 //= require bootstrap
-//= require theme/theme
+//= require ./theme/theme
 //= require toastr/toastr
 //= require flashes

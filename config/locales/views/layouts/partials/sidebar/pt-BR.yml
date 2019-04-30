@@ -3,7 +3,7 @@ pt-BR:
     partials:
       sidebar:
         exemplo: "Exemplo"
-        admin: "Administração"
+        admin: "Admin"
         users: "Usuários"
         computers: "Computadores"
         rooms: "Salas"
