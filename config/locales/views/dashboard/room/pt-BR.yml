@@ -1,0 +1,8 @@
+pt-BR:
+  dashboard:
+    room:
+      card:
+        title: "Sala"
+        name: "%{room_name}"
+        management: "Gerenciar"
+

@@ -1,9 +1,19 @@
 class DashboardController < ApplicationController
   def index
-    @switches = current_account.switches
-    @ports = current_account.ports
-    @computers = current_account.computers
     @rooms = current_account.rooms
-    @users = current_account.users
+
+    @counts = create_count_elements_hash
+  end
+
+  private
+
+  def create_count_elements_hash
+    {
+      switches: current_account.switches.count,
+      ports: current_account.ports.count,
+      computers: current_account.computers.count,
+      rooms: current_account.rooms.count,
+      users: current_account.users.count
+    }
   end
 end

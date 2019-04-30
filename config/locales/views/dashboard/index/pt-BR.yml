@@ -1,5 +1,7 @@
 pt-BR:
   dashboard:
+    index:
+      title: "Gerenciamento da Rede"
     admin_panel:
       title: "Painel de Administração"
       card:
@@ -16,4 +18,4 @@ pt-BR:
         details: "Ver detalhes"
         count:
           one: "1 Registro encontrado"
-          other: "%{count} Registros encontrados"
+          other: "%{count} Registros"

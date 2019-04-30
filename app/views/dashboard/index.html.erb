@@ -3,46 +3,12 @@
 <% end %>
 
 <div class="card mb-3 bg-dark text-light">
-  <div class="card-header">
-    <%= icon('fas','home', 'Dashboard', class: 'fa-fw') %>
+  <div class="card-header h3">
+    <%= icon('fas','user-shield', t('.title'), class: 'fa-fw h2 mb-0') %>
   </div>
-
   <div class="card-body">
     <div class="row">
-      <div class="col-xl-3 col-sm-6 mb-3">
-        <div class="card text-dark bg-white o-hidden h-100">
-          <div class="card-body">
-            <div class="card-body-icon">
-              <%= icon('fas','calendar-day', class: 'fa-fw') %>
-            </div>
-            <div class="mr-5">Card 1</div>
-          </div>
-          <a class="card-footer text-dark clearfix small z-1'1" href="#">
-            <span class="float-left">Ver Detalhes</span>
-            <span class="float-right">
-              <%= icon('fas','angle-right') %>
-            </span>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-xl-3 col-sm-6 mb-3">
-        <div class="card text-white bg-warning o-hidden h-100">
-          <div class="card-body">
-            <div class="card-body-icon">
-              <%= icon('fas','list', class: 'fa-fw') %>
-            </div>
-            <div class="mr-5">Card 2</div>
-          </div>
-          <a class="card-footer text-dark clearfix small z-1'1" href="#">
-            <span class="float-left">Ver Detalhes</span>
-            <span class="float-right">
-              <%= icon('fas','angle-right') %>
-            </span>
-          </a>
-        </div>
-      </div>
-
+      <%= render(partial: 'dashboard/room', collection: @rooms) %>
     </div>
   </div>
 </div>
