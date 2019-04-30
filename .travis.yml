@@ -1,0 +1,31 @@
+language: ruby
+install:
+- bundle install
+- yarn install
+before_script:
+- cp config/database.example.yml config/database.yml
+- sudo sed -i -e '/local.*peer/s/postgres/all/' -e 's/peer\|md5/trust/g' /etc/postgresql/*/main/pg_hba.conf
+- sudo service postgresql restart
+- sudo psql -c "create database mission_us_test;" -U postgres
+- curl -sL https://deb.nodesource.com/setup_10.x | bash -
+- curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+- echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+- sudo apt-get update
+- sudo apt-get install -qq -y build-essential nodejs yarn
+script:
+- bin/rake db:migrate RAILS_ENV=test
+- bundle exec rake
+addons:
+  postgresql: '10'
+  apt:
+    packages:
+    - postgresql-10
+    - postgresql-client-10
+env:
+  global:
+  - PGPORT=5433
+services:
+- postgresql
+branches:
+  only:
+    - master

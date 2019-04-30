@@ -8,6 +8,17 @@ require 'rspec/rails'
 require 'database_cleaner'
 require 'pundit/matchers'
 
+require 'simplecov'
+require 'coveralls'
+
+SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+SimpleCov.start do
+  add_filter 'app/secrets'
+end
+
+
+# Coveralls.wear!('rails')
+
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 begin
