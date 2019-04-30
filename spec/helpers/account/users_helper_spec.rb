@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Account::UsersHelper, type: :helper do
-  let(:user) {create(:user)}
-  let(:user1) {create(:user)}
+  let(:user) { create(:user) }
+  let(:user1) { create(:user) }
 
   setup do
     allow(helper).to receive(:current_user).and_return(user)
