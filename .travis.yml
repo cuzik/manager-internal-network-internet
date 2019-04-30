@@ -1,4 +1,6 @@
 language: ruby
+rvm:
+- 2.6.2
 install:
 - bundle install
 before_script:
@@ -17,7 +19,7 @@ addons:
     - postgresql-client-10
 env:
   global:
-  - PGPORT=5433
+  - PGPORT=5432
 services:
 - postgresql
 branches:
