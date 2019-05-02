@@ -9,8 +9,6 @@
 
 Depois eu descrevo melhor o projeto aqui
 
-Depois eu descrevo melhor o projeto aqui
-
 ## Data Base
 
 [Schema](erd.pdf)
