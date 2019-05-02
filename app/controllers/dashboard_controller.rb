@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
     # [TODO]: This line is a simple test to show on view correct room
     @rooms = current_account.rooms.where(id: 1)
 
-    @switches = @rooms.first.switches
+    @switches = @rooms.first.&:switches
 
     @counts = create_count_elements_hash
   end
