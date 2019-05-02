@@ -1,11 +1,11 @@
 # Mini
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=mini-udesc&style=flat)](https://mini-udesc.herokuapp.com)
+![APP-Mini](https://img.shields.io/badge/MiNi-Udesc-blue.svg?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/cuzik/manager-internal-network-internet.svg?style=flat-square)
 
-![APP-Mini](https://img.shields.io/badge/MiNi-Udesc-blue.svg?style=flat)
-![GitHub top language](https://img.shields.io/github/languages/top/cuzik/manager-internal-network-internet.svg?style=flat)
-[![Build Status](https://travis-ci.org/cuzik/manager-internal-network-internet.svg?branch=master&style=flat)](https://travis-ci.org/cuzik/manager-internal-network-internet)
-[![Coverage Status](https://coveralls.io/repos/github/cuzik/manager-internal-network-internet/badge.svg?style=flat)](https://coveralls.io/github/cuzik/manager-internal-network-internet)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=mini-udesc&style=flat)](https://mini-udesc.herokuapp.com)
+[![Build Status](https://img.shields.io/travis/cuzik/manager-internal-network-internet.svg?branch=master&style=flat-square)](https://travis-ci.org/cuzik/manager-internal-network-internet)
+[![Coverage Status](https://img.shields.io/coveralls/github/cuzik/manager-internal-network-internet/badge.svg?style=flat-square)](https://coveralls.io/github/cuzik/manager-internal-network-internet)
 
 Depois eu descrevo melhor o projeto aqui
 
