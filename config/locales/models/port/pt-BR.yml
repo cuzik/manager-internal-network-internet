@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      port:
+        one: "Porta"
+        other: "Portas"
+    attributes:
+      port:
+        number: "Número"
+        enabled: "Ligada"
+        editable: "Editavel"
+        switch_id: "Switch"

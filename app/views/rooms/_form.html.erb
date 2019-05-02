@@ -4,14 +4,14 @@
   <div class="form-group row">
     <div class="col-md-12">
       <div class="form-group">
-        <%= form.label :name %>
-        <%= form.text_field :name, autofocus: true, class: "form-control" %>
+        <%= form.label(:name) %>
+        <%= form.text_field(:name, autofocus: true, class: "form-control") %>
       </div>
     </div>
   </div>
 
   <div class="float-right">
     <%= link_to(t('.back'), :back, class: "btn btn-primary") %>
-    <%= form.submit class:"btn btn-success" %>
+    <%= form.submit(class:"btn btn-success") %>
   </div>
 <% end %>

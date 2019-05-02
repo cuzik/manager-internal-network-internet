@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    models:
+      computer:
+        one: "Computadore"
+        other: "Computadores"
+    attributes:
+      computer:
+        name: "Nome"
+        owner: "Mestre"
+        mac_address: "MAC Address"
+        port_id: Porta
+        switch_id: Switch
+        room_id: Sala
+

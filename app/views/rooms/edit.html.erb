@@ -3,6 +3,6 @@
     <%= icon('fas','igloo', t('.title', room_name: @room.name), class: 'fa-fw h2 mb-0') %>
   </div>
   <div class="card-body">
-    <%= render 'form', room: @room %>
+    <%= render('form', room: @room) %>
   </div>
 </div>

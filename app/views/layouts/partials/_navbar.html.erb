@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-  <%= link_to(current_user.account.name.upcase, root_path, class:"navbar-brand mr-1") %>
   <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-    <%= icon('fas','dragon', class: 'h3 mb-0') %>
+    <%= icon('fas','bars', class: 'h5 mb-0') %>
   </button>
+  <%= link_to(current_user.account.name.upcase, root_path, class:"navbar-brand mr-1") %>
 
   <!-- Navbar Search -->
   <div class="ml-auto" />
