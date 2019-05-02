@@ -1,0 +1,25 @@
+<div class="card mb-3 bg-dark text-light">
+  <div class="card-header h3">
+    <%= icon('fas','user-secret', 'geral', class: 'fa-fw h2 mb-0') %>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-3">
+        <span class="float-right font-weight-bold">IP:</span>
+      </div>
+      <div class="col-md-3"><%= current_user.current_sign_in_ip %></div>
+      <div class="col-md-2">
+        <span class="float-right font-weight-bold">ultimo login:</span>
+      </div>
+      <div class="col-md-4"><%= l current_user.last_sign_in_at %></div>
+      <div class="col-md-3">
+        <span class="float-right font-weight-bold">Computadores ligados:</span>
+      </div>
+      <div class="col-md-3">aaaaaaaaaaaaaa</div>
+      <div class="col-md-2">
+        <span class="float-right font-weight-bold">Proximo evento:</span>
+      </div>
+      <div class="col-md-4">aaaaaaaaaaaaaa</div>
+    </div>
+  </div>
+</div>
