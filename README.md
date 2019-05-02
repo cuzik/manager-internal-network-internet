@@ -3,7 +3,7 @@
 ![APP-Mini](https://img.shields.io/badge/MiNi-Udesc-blue.svg?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/cuzik/manager-internal-network-internet.svg?style=flat-square)
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=mini-udesc&style=flat)](https://mini-udesc.herokuapp.com)
+[![Heroku](https://heroku-badge.herokuapp.com/?app=udesc-mini&style=flat)](https://udesc-mini.herokuapp.com)
 [![Build Status](https://img.shields.io/travis/cuzik/manager-internal-network-internet.svg?branch=master&style=flat-square)](https://travis-ci.org/cuzik/manager-internal-network-internet)
 [![Coverage Status](https://img.shields.io/coveralls/github/cuzik/manager-internal-network-internet/badge.svg?style=flat-square)](https://coveralls.io/github/cuzik/manager-internal-network-internet)
 
