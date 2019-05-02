@@ -1,0 +1,8 @@
+pt-BR:
+  dashboard:
+    switch:
+      card:
+        title: "Switch"
+        name: "%{switch_name}"
+        management: "Gerenciar"
+

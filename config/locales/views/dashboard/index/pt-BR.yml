@@ -2,6 +2,17 @@ pt-BR:
   dashboard:
     index:
       title: "Gerenciamento da Rede"
+      general:
+        title: "Informações gerais"
+        last_access: "Último Acesso:"
+        ip: "IP:"
+      computers:
+        title: "Computadores"
+        "on": "Ligados:"
+        "off": "Desligados:"
+        disconect: "Desconectatos"
+      rooms: "Salas"
+      switches: "Switches"
     admin_panel:
       title: "Painel de Administração"
       card:
