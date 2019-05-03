@@ -4,6 +4,6 @@ FactoryBot.define do
     mac_address { Faker::Internet.mac_address('AA') }
     ip { Faker::Internet.private_ip_v4_address }
 
-    account
+    room
   end
 end

@@ -1,9 +1,10 @@
 class DashboardController < ApplicationController
   def index
-    # [TODO]: This line is a simple test to show on view correct room
-    @rooms = current_account.rooms.where(id: 1)
-
-    @switches = @rooms.first.&:switches
+    @rooms = current_user.owner? ? current_account.rooms :
+      [current_account.computers.find_by(
+        mac_address: current_user.get_mac_by_ip,
+        owner: true
+      )]
 
     @counts = create_count_elements_hash
   end

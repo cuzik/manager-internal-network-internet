@@ -1,9 +1,9 @@
 class Computer < ApplicationRecord
-  belongs_to :room, optional: true
-  belongs_to :account
+  belongs_to :room
   belongs_to :port, optional: true
 
   has_one :switch, through: :port
+  has_one :account, through: :room
 
   validates :name, presence: true, uniqueness: true
   validates :mac_address, presence: true, uniqueness: true
