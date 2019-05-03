@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Computer, type: :model do
   context 'associations' do
-    it { should belong_to(:account) }
     it { should belong_to(:port).optional }
-    it { should belong_to(:room).optional }
+    it { should belong_to(:room) }
 
     it { should have_one(:switch).through(:port) }
+    it { should have_one(:account).through(:room) }
   end
 
 

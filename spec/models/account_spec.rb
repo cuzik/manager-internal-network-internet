@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Account, type: :model do
   context 'associations' do
-    it { should have_many(:computers).dependent(:destroy) }
     it { should have_many(:users).dependent(:destroy) }
     it { should have_many(:rooms).dependent(:destroy) }
     it { should have_many(:switches).dependent(:destroy) }
     it { should have_many(:ports).through(:switches) }
+    it { should have_many(:computers).through(:rooms) }
   end
 
   context 'validations' do
