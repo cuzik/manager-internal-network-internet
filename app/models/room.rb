@@ -5,4 +5,10 @@ class Room < ApplicationRecord
   has_many :switches, through: :computers
 
   validates :name, presence: true, uniqueness: true
+
+  scope :computer_owners, -> {  }
+
+  def computer_owners
+    computers.where(owner: true)
+  end
 end

@@ -50,21 +50,23 @@ room_302 = Room.create!(name: "302", account: udesc)
 p "Create Port and Computer"
 
 Port.create!(number: 1, enabled: true, editable: false, switch: switch_one)
+  Computer.create!(name: "pc_301_1", owner: true, mac_address: "AA:AA:BB:BB:CC:CC", ip: "192.168.0.250", room: room_301)
 (2..24).each do |number|
-  port = Port.create!(number: number, enabled: true, editable: true, switch: switch_one)
-  Computer.create!(name: "pc_301_#{number}", owner: false, mac_address: "AA:AA:BB:BB:CC:#{number+10}", ip: "192.168.0.#{50 + number}", account: udesc)
+  port = Port.create!(number: number, switch: switch_one)
+  Computer.create!(name: "pc_301_#{number}", mac_address: "AA:AA:BB:BB:CC:#{number+10}", ip: "192.168.0.#{50 + number}", room: room_301)
 end
 
 Port.create!(number: 1, enabled: true, editable: false, switch: switch_two)
+  Computer.create!(name: "pc_302_1", owner: true, mac_address: "AA:AA:BB:BB:CC:DD", ip: "192.168.0.240", room: room_302)
 (2..24).each do |number|
-  port = Port.create!(number: number, enabled: true, editable: true, switch: switch_two)
-  Computer.create!(name: "pc_302_#{number}", owner: false, mac_address: "AA:AA:BB:BB:#{number+10}:C1", ip: "192.168.0.#{100 + number}", account: udesc)
+  port = Port.create!(number: number, switch: switch_two)
+  Computer.create!(name: "pc_302_#{number}", mac_address: "AA:AA:BB:BB:#{number+10}:C1", ip: "192.168.0.#{100 + number}", room: room_302)
 end
 
 Port.create!(number: 1, enabled: true, editable: false, switch: switch_three)
 (2..24).each do |number|
-  port = Port.create!(number: number, enabled: true, editable: true, switch: switch_three)
-  Computer.create!(name: "pc_302_3#{number}", owner: false, mac_address: "AA:AA:BB:BB:#{number+50}:C1", ip: "192.168.0.#{150 + number}", account: udesc)
+  port = Port.create!(number: number, switch: switch_three)
+  Computer.create!(name: "pc_302_3#{number}", mac_address: "AA:AA:BB:BB:#{number+50}:C1", ip: "192.168.0.#{150 + number}", room: room_302)
 end
 
 

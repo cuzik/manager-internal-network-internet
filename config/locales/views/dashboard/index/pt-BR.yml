@@ -6,6 +6,7 @@ pt-BR:
         title: "Informações gerais"
         last_access: "Último Acesso:"
         ip: "IP:"
+        mac_address: "MAC Address:"
       computers:
         title: "Computadores"
         "on": "Ligados:"
