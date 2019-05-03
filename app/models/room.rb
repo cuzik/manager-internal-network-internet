@@ -6,8 +6,6 @@ class Room < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
-  scope :computer_owners, -> {  }
-
   def computer_owners
     computers.where(owner: true)
   end
