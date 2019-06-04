@@ -1,0 +1,19 @@
+<div class="card mb-3 bg-dark text-light">
+  <div class="card-header h3">
+    <%= icon('fas','desktop', t('.title'), class: 'fa-fw h2 mb-0') %>
+    <form id=all"" class="float-right">
+      <label class="custom-control custom-checkbox">
+        Desligar todos
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </form>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <% @computers.each do |computer| %>
+        <%= render('rooms/network_manager/computer', computer: computer) %>
+      <% end %>
+    </div>
+  </div>
+</div>

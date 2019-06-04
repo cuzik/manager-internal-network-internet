@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :dashboard, only: [:index]
-  resources :rooms
+  resources :rooms do
+    get :network_manager
+  end
   resources :switches
   resources :computers
   resources :ports

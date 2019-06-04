@@ -1,0 +1,4 @@
+pt-BR:
+  rooms:
+    network_manager:
+      title: "Sala %{name}"

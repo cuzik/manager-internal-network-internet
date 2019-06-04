@@ -8,6 +8,13 @@ class RoomsController < ApplicationController
   end
 
   def show
+
+    @computers = @room.computers.order(:name)
+  end
+
+  def network_manager
+    @room = Room.find(params[:room_id])
+
     authorize @room
 
     @computers = @room.computers.order(:name)

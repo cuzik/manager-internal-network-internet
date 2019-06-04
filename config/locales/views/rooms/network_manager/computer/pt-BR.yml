@@ -1,0 +1,7 @@
+pt-BR:
+  rooms:
+    network_manager:
+      computer:
+        card:
+          title: "Computador"
+          name: "%{computer_name}"

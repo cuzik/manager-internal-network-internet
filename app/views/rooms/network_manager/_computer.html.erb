@@ -1,0 +1,21 @@
+<div class="col-xl-3 col-sm-6 mb-3">
+  <div class="card text-dark <%= class_color_computer(computer) %> o-hidden h-100">
+    <div class="card-header">
+      <%= icon('fas','desktop', t('.card.title'), class: 'fa-fw h5 mb-0') %>
+
+      <form id="<%= computer.id %>" class="float-right">
+        <label class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input">
+          <span class="custom-control-indicator"></span>
+        </label>
+      </form>
+
+    </div>
+    <div class="card-body">
+      <div class="card-body-icon">
+        <%= icon('fas','desktop', class: 'fa-fw') %>
+      </div>
+      <div class="mr-5"><%= t('.card.name', computer_name: computer.name) %></div>
+    </div>
+  </div>
+</div>
