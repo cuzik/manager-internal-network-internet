@@ -4,9 +4,9 @@ class DashboardController < ApplicationController
       [current_account.computers.find_by(
         mac_address: current_user.get_mac_by_ip,
         owner: true
-      )]
+      )&.room].compact
 
-    @counts = create_count_elements_hash
+      @counts = create_count_elements_hash
   end
 
   private
