@@ -6,7 +6,7 @@
       <form id="<%= computer.id %>" class="float-right">
         <label class="custom-control custom-checkbox">
           <input type="checkbox" class="custom-control-input">
-          <span class="custom-control-indicator"></span>
+          <%= link_to('', computer_enable_network_access_path(computer), method: :post, class:'custom-control-indicator')%>
         </label>
       </form>
 

@@ -55,6 +55,10 @@ class ComputersController < ApplicationController
     end
   end
 
+  def enable_network_access
+    EnableComputerNetworkService.new().execute(params[:computer_id])
+  end
+
   def destroy
     authorize @computer
 

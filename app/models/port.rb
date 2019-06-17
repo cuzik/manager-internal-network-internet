@@ -8,4 +8,8 @@ class Port < ApplicationRecord
     scope: :switch_id,
     message: 'Não parça.'
   }
+
+  def change_status!
+    update(enabled: !enabled?)
+  end
 end

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     get :network_manager
   end
   resources :switches
-  resources :computers
+  resources :computers do
+    post :enable_network_access
+  end
   resources :ports
   namespace :account do
     resources :users
