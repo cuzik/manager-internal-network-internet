@@ -6,7 +6,7 @@ ruby '2.6.2'
 gem 'devise'
 gem 'devise-i18n'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.3'
 gem "pundit"
 
